@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 let votes = [0,0,0,0,0,0]
-let comments = [[],[],[],[],[],[]]
+let comments = [[],[],[],[],[],[],[]]
 const port = 1337;
 
 console.log('running index.js'.blue);
@@ -24,9 +24,9 @@ app.get('/', function(req, res) {
 app.post('/comment/:artistID', function(req, res) {
 	let artistID = req.params.artistID;
 	console.log(req.body.text)
-	comments[artistID].push( {
-		text: req.body.text
-	})
+	// comments[artistID].push( {
+	// 	text: req.body.text
+	// })
 	res.send(comments)
 });
 
@@ -50,6 +50,7 @@ app.post('/vote/:artistID', function(req, res) {
 
 
 app.listen(port, function() {
-	console.log('Example app listening on port 1337!'.red)
+	console.log("HI ROOCHUL".yellow)
+	console.log('Example app listening on port 1337!, this is the local port, before deploying add in API IP'.red)
 });
 

@@ -103,10 +103,6 @@ header h1 {
 	padding: 10px;
 }
 
-.content section .h1-hero-text-bottom {
-	padding: 10px;
-}
-
 .content .company-name-span {
 	font-family: "Poiret One", cursive;
 	color: white;
@@ -117,13 +113,11 @@ header h1 {
 }
 
 .content .images {
-	position: relative;
+	display: flex;
+	justify-content: center;
 }
 
 .content .images img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 	width: 50%;
 	padding: 20px;
 }

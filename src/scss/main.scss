@@ -57,7 +57,6 @@ header {
 			font-family: $corben-font;
 			font-weight: 1000;
 			font-size: 15px;
-			// padding: 5px 10px;
 			}
 
 
@@ -69,13 +68,6 @@ header {
 			padding: 10px;
 
 		}
-
-		.h1-hero-text-bottom {
-			padding: 10px;
-			
-
-		}
-
 	}
 
 	.company-name-span {
@@ -88,12 +80,17 @@ header {
 	}
 
 	.images {
-		position: relative;
+		display: flex;
+		justify-content: center;
 
+		.product-1 {
+			p {
+			}
+			input {
+			}
+		}
+		
 		img{
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
 			width: 50%;
 			padding: 20px;
 		

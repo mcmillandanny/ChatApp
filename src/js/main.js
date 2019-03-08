@@ -1,4 +1,4 @@
-console.log('Chat App');
+console.log('Hipster Review');
 
 console.log("This is the Comment App");
 const LOCAL_URL_COMMENT = 'http://localhost:1337/comment';
@@ -7,10 +7,8 @@ let commentBtns = document.querySelectorAll('.comment');
 console.log(commentBtns);
 let postBtn = document.querySelectorAll('.send');
 
+
 //THIS IS THE NEW COMMENT APP
-
-
-
 commentBtns.forEach(function(comment) {
 	comment.addEventListener('click', function() {
 		let userInput = this.parentElement.querySelector('.user-input')

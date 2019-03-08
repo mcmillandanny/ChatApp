@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('Chat App');
+console.log('Hipster Review');
 
 console.log("This is the Comment App");
 var LOCAL_URL_COMMENT = 'http://localhost:1337/comment';
@@ -10,8 +10,6 @@ console.log(commentBtns);
 var postBtn = document.querySelectorAll('.send');
 
 //THIS IS THE NEW COMMENT APP
-
-
 commentBtns.forEach(function (comment) {
 	comment.addEventListener('click', function () {
 		var userInput = this.parentElement.querySelector('.user-input');

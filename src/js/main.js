@@ -25,19 +25,22 @@ let sendComment = function() {
 	console.log('being clicked')
 
 	console.log("clicked send button", this)
-	console.log(this.parentElement)
 	let newComment = this.parentElement.querySelector('.user-input').value;
 	console.log(newComment)
-	console.log("send comment for artist: ", this.dataset.artist)
+	let productID = this.dataset.product
+	console.log("send comment for this product: ", productID)
+
+	let url = LOCAL_URL_COMMENT + "/" + productID;
+	console.log('send comment,', newComment, ' to url,', url)
 
 	// console.log("send comment for artist: ", this.getAttribute('data-artist'))
 	axios
-		.post(LOCAL_URL_COMMENT + "/" + this.dataset.artist , {
+		.post(url, {
 			text: newComment
 		})
 		.then(function(response) {
 			console.log('server responsed', response)
-			showComments(response.data)
+			showComments(response.data, productID)
 		})
 		.catch(function(error) {
 			console.log('Not Working', error)
@@ -53,17 +56,17 @@ postBtn.forEach(function(btn) {
 
 
 
-let showComments = function(comments) {
+let showComments = function(comments, productID) {
 	console.log('showing comments', comments)
 
-	let commentsUL = document.querySelector('ul.comments');
+	let commentsUL = document.querySelectorAll('ul.comments')[productID];
 	commentsUL.innerHTML = '';
 
-	comments.forEach(function(showComments) {
-		let showComment = document.createElement('li');
-		showComment.innerHTML = `${comments.text}`
+	comments.forEach(function(comment) {
+		let newLiEl = document.createElement('li');
+		newLiEl.innerHTML = `the commenter said ${comment.text}`
 
-		commentsUL.appendChild( newComment );
+		commentsUL.appendChild( newLiEl );
 
 
 	})

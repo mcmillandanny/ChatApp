@@ -21,13 +21,13 @@ app.get('/', function(req, res) {
 });
 
 
-app.post('/comment/:artistID', function(req, res) {
-	let artistID = req.params.artistID;
+app.post('/comment/:productID', function(req, res) {
+	let productID = req.params.productID;
 	console.log(req.body.text)
-	// comments[artistID].push( {
-	// 	text: req.body.text
-	// })
-	res.send(comments)
+	comments[productID].push( {
+		text: req.body.text
+	})
+	res.send(comments[productID])
 });
 
 
@@ -50,7 +50,6 @@ app.post('/vote/:artistID', function(req, res) {
 
 
 app.listen(port, function() {
-	console.log("HI ROOCHUL".yellow)
-	console.log('Example app listening on port 1337!, this is the local port, before deploying add in API IP'.red)
+	console.log('Example app listening on port 1337!'.red)
 });
 

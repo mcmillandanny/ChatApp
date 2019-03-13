@@ -12,6 +12,19 @@ $strawberry: #D6665A;
 $tablet-bp: 768px;
 $desktop-bp: 1280px;
 
+
+@mixin tablet  {
+	@media (min-width: $tablet-bp) {
+		@content;
+	}
+}
+
+@mixin desktop  {
+	@media (min-width: $desktop-bp) {
+		@content;
+	}
+}
+
 /* 1. Main Layout ================================= */
 
 * {
@@ -19,7 +32,8 @@ $desktop-bp: 1280px;
 }
 
 body {
-	background: #ccc;
+	background: $strawberry;
+	
 }
 
 
@@ -30,6 +44,11 @@ body {
 header {
 	padding: 10px;
 	background: $strawberry;
+
+	@include desktop() {
+		max-width: $desktop-bp;
+		margin: auto;
+	}
 	h1 {
 		font-family: $poiret-one-font;
 		color: white;
@@ -45,6 +64,10 @@ header {
 .content {
 	position: relative;
 
+	@include desktop() {
+		max-width: $desktop-bp;
+		margin: auto;
+	}
 	section {
 		background: $sand;
 		width: 100%;
@@ -52,21 +75,95 @@ header {
 		min-height: 500px;
 		text-align: center;
 
+		.hero-text-wrapper-top {
+			background: #75A48B;
+			width: 100%;
+			padding: 20px;
+			margin-left: 20px;
+			margin: auto;
 
-		h1 {
-			font-family: $corben-font;
-			font-weight: 1000;
-			font-size: 15px;
+			@include tablet() {
+				width: 50%;
+				margin: 0;
 			}
-
-
-		.h1-hero-text-top {
-			padding: 10px;
+			
+			h1 {
+				font-family: $corben-font;
+				font-weight: 1000;
+				font-size: 20px;
+			}
+	
 		}
 
-		.h1-hero-text-middle {
-			padding: 10px;
+		.hero-text-wrapper-bottom {
+			background: #DC9B74;
+			width: 100%;
+			margin-left: auto;
+			padding: 20px;
+			margin-right: 20px;
+			margin: auto;
 
+			@include tablet() {
+				width: 50%;
+				margin: 0;
+				margin-left: auto;
+				
+			}
+			
+			h1 {
+				font-family: $corben-font;
+				font-weight: 1000;
+				font-size: 20px;
+			}
+		}
+
+		
+
+		.product-wrapper-day {
+			display: inline-block;
+			position: relative;
+			img {
+				padding: 10px;
+				width: 60%;
+				margin-left: auto;
+				margin-top: 50px;
+				display: inline-block;
+
+				@include tablet() {
+					max-width: 50%;
+				}
+			}
+	
+			h2 {
+				text-align: center;
+				font-size: 40px;
+				font-family: $corben-font;
+				border-bottom: 2px solid $green;
+				width: 50%;
+				margin: auto;
+				margin-top: 10px; 
+				padding: 5px;
+
+			}
+
+			p {
+				display: inline-block;
+				width: 35%;
+				vertical-align: top;
+			
+				background: $strawberry;
+				padding: 20px;
+				font-family: $corben-font;
+				color: black;
+				line-height: 1.2;
+				text-align: left;
+				font-size: 12px;
+
+				@include tablet() {
+					font-size: 30px;
+					margin-top: 60px;
+				}
+			}
 		}
 	}
 
@@ -74,27 +171,75 @@ header {
 		font-family: $poiret-one-font;
 		color: white;
 		font-weight: 1000;
-		font-size: 1.5em;
+		font-size: 20px;
 		border-bottom: 1mm ridge $green;
-		margin-bottom: -5px; 
+	
 	}
 
 	.images {
-		display: flex;
-		justify-content: center;
+		width: 100%;
+		background: $green;
+		display: block;
+		margin: auto;
 
-		.product-1 {
-			p {
-			}
-			input {
-			}
+		@include tablet() {
+			width: 75%;
 		}
-		
-		img{
+
+		@include desktop() {
+			width: 55%;
+		}
+
+		img {
 			width: 50%;
-			padding: 20px;
-		
+			margin: auto;
+			padding: 10px;
 		}
+	
+		p {
+	
+			vertical-align: top;
+			font-family: $poiret-one-font;
+			margin: 20px 0px;
+	
+			@include tablet() {
+			display: inline-block;	
+			}
+		}
+	
+		input {
+			margin: 20px 20px;
+			outline: none;
+	
+			@include tablet() {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+	
+		ul {
+			display: block;
+			width: 30%;
+	
+		}
+	
+		li {
+			color: red;
+	
+			@include tablet() {
+				display: inline-block;
+			}
+		}
+	
+		button {
+			vertical-align: top;
+			margin: 20px 0px;
+	
+			@include tablet() {
+				display: inline-block;
+			}
+		}
+	
 	}
+	
 }
-

@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Corben" rel="stylesheet">
-
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="dist/css/main.css">
 	</head>
 	<body>
@@ -23,65 +23,54 @@
 			</header>
 		<div class="content">
 			<section class="hero">
-				<h1 class="h1-hero-text-top">Welcome to <span class="company-name-span">Spigot & Snake</span></h1>
-				<h1 class="h1-hero-text-middle">the safe haven for product for reviews. </h1>
+				<div class="hero-text-wrapper-top">
+					<h1 class="h1-hero-text-top">Welcome to <span class="company-name-span">Spigot & Snake</span></h1>
+				</div>
+				<div class="hero-text-wrapper-bottom">
+					<h1 class="h1-hero-text-middle">the safe haven for product for reviews. </h1>
+				</div>
+				<div class="product-wrapper-day">
+					<h2>Product of the day</h2>
+					<img src="dist/img/bikebeers.jpg" alt="bike-beers??!?!?">
+					<p>This Beer holder is perfect for your bicycle. Made from recycled leather, this beer holder is sturdy just as it is cool.</p>
+				</div>
+				
 			</section>
 			<div class="images">
 				<div class="product-1">
-					<ul>
-						<li>
-							<img src="dist/img/beard-oil.jpeg" alt="bear-oil">
-							<p>Review this product</p>
-							<input placeholder="Review" class="product1-review user-input">
-							<button data-artist=="0" class="send closed">Post</button>
-						</li>
-					</ul>
+					<img src="dist/img/beard-oil.jpeg" alt="bear-oil">
+					<p>Write a review:</p>
+					<input placeholder="Review" class="product1-review user-input">
+					<button data-product="0" class="send closed">Post</button>
+					<ul class="comments"></ul>
 				</div>
-				<!-- <div class="product-2">
-					<ul>
-						<li>
-							<img src="dist/img/bike.jpg" alt="bike">
-							<p>Review this product</p>
-							<input placeholder="Review"class="product1-review">
-						</li>
-					</ul>
+				<div class="product-2">
+					<img src="dist/img/bike.jpg" alt="bike">
+					<p>Write a review:</p>
+					<input placeholder="Review"class="product1-review user-input">
+					<button data-product="1" class="send closed">Post</button>
+					<ul class="comments"></ul>
 				</div>
 				<div class="product-3">
-					<ul>
-						<li>
-							<img src="dist/img/glasses.jpg" alt="glasses">	
-							<p>Review this product</p>
-							<input placeholder="Review"class="product1-review">
-						</li>
-					</ul>
+					<img src="dist/img/glasses.jpg" alt="glasses">	
+					<p>Write a review:</p>
+					<input placeholder="Review"class="product1-review">
 				</div>
 				<div class="product-4">
-					<ul>
-						<li>
-							<img src="dist/img/masonjar.jpg" alt="mason-jar">
-							<p>Review this product</p>
-							<input placeholder="Review"class="product1-review">
-						</li>
-					</ul>
+					<img src="dist/img/masonjar.jpg" alt="mason-jar">
+					<p>Write a review:</p>
+					<input placeholder="Review"class="product1-review">
 				</div>
 				<div class="product-5">
-					<ul>
-						<li>
-							<img src="dist/img/pbr.jpg" alt="pbr">
-							<p>Review this product</p>
-							<input placeholder="Review"class="product1-review">
-						</li>
-					</ul>
+					<img src="dist/img/pbr.jpg" alt="pbr">
+					<p>Write a review:</p>
+					<input placeholder="Review"class="product1-review">
 				</div>
 				<div class="product-6">
-					<ul>
-						<li>
-							<img src="dist/img/water.png" alt="water">
-							<p>Review this product</p>
-							<input placeholder="Review"class="product1-review">
-						</li>
-					</ul>
-				</div> -->
+					<img src="dist/img/water.png" alt="water">
+					<p>Write a review:</p>
+					<input placeholder="Review"class="product1-review">
+				</div>
 			</div>
 		</div>
 		

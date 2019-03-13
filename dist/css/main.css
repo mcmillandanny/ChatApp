@@ -59,13 +59,20 @@ table {
 }
 
 body {
-	background: #ccc;
+	background: #D6665A;
 }
 
 /* 2. Content ================================= */
 header {
 	padding: 10px;
 	background: #D6665A;
+}
+
+@media (min-width: 1280px) {
+	header {
+		max-width: 1280px;
+		margin: auto;
+	}
 }
 
 header h1 {
@@ -81,6 +88,13 @@ header h1 {
 	position: relative;
 }
 
+@media (min-width: 1280px) {
+	.content {
+		max-width: 1280px;
+		margin: auto;
+	}
+}
+
 .content section {
 	background: #D9CFB0;
 	width: 100%;
@@ -89,37 +103,181 @@ header h1 {
 	text-align: center;
 }
 
-.content section h1 {
+.content section .hero-text-wrapper-top {
+	background: #75A48B;
+	width: 100%;
+	padding: 20px;
+	margin-left: 20px;
+	margin: auto;
+}
+
+@media (min-width: 768px) {
+	.content section .hero-text-wrapper-top {
+		width: 50%;
+		margin: 0;
+	}
+}
+
+.content section .hero-text-wrapper-top h1 {
 	font-family: "Corben", cursive;
 	font-weight: 1000;
-	font-size: 15px;
+	font-size: 20px;
 }
 
-.content section .h1-hero-text-top {
-	padding: 10px;
+.content section .hero-text-wrapper-bottom {
+	background: #DC9B74;
+	width: 100%;
+	margin-left: auto;
+	padding: 20px;
+	margin-right: 20px;
+	margin: auto;
 }
 
-.content section .h1-hero-text-middle {
+@media (min-width: 768px) {
+	.content section .hero-text-wrapper-bottom {
+		width: 50%;
+		margin: 0;
+		margin-left: auto;
+	}
+}
+
+.content section .hero-text-wrapper-bottom h1 {
+	font-family: "Corben", cursive;
+	font-weight: 1000;
+	font-size: 20px;
+}
+
+.content section .product-wrapper-day {
+	display: inline-block;
+	position: relative;
+}
+
+.content section .product-wrapper-day img {
 	padding: 10px;
+	width: 60%;
+	margin-left: auto;
+	margin-top: 50px;
+	display: inline-block;
+}
+
+@media (min-width: 768px) {
+	.content section .product-wrapper-day img {
+		max-width: 50%;
+	}
+}
+
+.content section .product-wrapper-day h2 {
+	text-align: center;
+	font-size: 40px;
+	font-family: "Corben", cursive;
+	border-bottom: 2px solid #75A48B;
+	width: 50%;
+	margin: auto;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.content section .product-wrapper-day p {
+	display: inline-block;
+	width: 35%;
+	vertical-align: top;
+	background: #D6665A;
+	padding: 20px;
+	font-family: "Corben", cursive;
+	color: black;
+	line-height: 1.2;
+	text-align: left;
+	font-size: 12px;
+}
+
+@media (min-width: 768px) {
+	.content section .product-wrapper-day p {
+		font-size: 30px;
+		margin-top: 60px;
+	}
 }
 
 .content .company-name-span {
 	font-family: "Poiret One", cursive;
 	color: white;
 	font-weight: 1000;
-	font-size: 1.5em;
+	font-size: 20px;
 	border-bottom: 1mm ridge #75A48B;
-	margin-bottom: -5px;
 }
 
 .content .images {
-	display: flex;
-	justify-content: center;
+	width: 100%;
+	background: #75A48B;
+	display: block;
+	margin: auto;
+}
+
+@media (min-width: 768px) {
+	.content .images {
+		width: 75%;
+	}
+}
+
+@media (min-width: 1280px) {
+	.content .images {
+		width: 55%;
+	}
 }
 
 .content .images img {
 	width: 50%;
-	padding: 20px;
+	margin: auto;
+	padding: 10px;
+}
+
+.content .images p {
+	vertical-align: top;
+	font-family: "Poiret One", cursive;
+	margin: 20px 0px;
+}
+
+@media (min-width: 768px) {
+	.content .images p {
+		display: inline-block;
+	}
+}
+
+.content .images input {
+	margin: 20px 20px;
+	outline: none;
+}
+
+@media (min-width: 768px) {
+	.content .images input {
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+.content .images ul {
+	display: block;
+	width: 30%;
+}
+
+.content .images li {
+	color: red;
+}
+
+@media (min-width: 768px) {
+	.content .images li {
+		display: inline-block;
+	}
+}
+
+.content .images button {
+	vertical-align: top;
+	margin: 20px 0px;
+}
+
+@media (min-width: 768px) {
+	.content .images button {
+		display: inline-block;
+	}
 }
 
 /*# sourceMappingURL=main.css.map */

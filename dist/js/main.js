@@ -30,7 +30,7 @@ var sendComment = function sendComment() {
 	var productID = this.dataset.product;
 	console.log("send comment for this product: ", productID);
 
-	var url = LOCAL_URL_COMMENT + "/" + productID;
+	var url = API_BASE_COMMENT + "/" + productID;
 	console.log('send comment,', newComment, ' to url,', url);
 
 	// console.log("send comment for artist: ", this.getAttribute('data-artist'))

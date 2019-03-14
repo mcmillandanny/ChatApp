@@ -36,7 +36,9 @@ let sendComment = function() {
 	// console.log("send comment for artist: ", this.getAttribute('data-artist'))
 	axios
 		.post(url, {
-			text: newComment
+			text: newComment,
+			timestamp: moment(new Date().getTime()).format('h:mm a')
+
 		})
 		.then(function(response) {
 			console.log('server responsed', response)
@@ -64,11 +66,24 @@ let showComments = function(comments, productID) {
 
 	comments.forEach(function(comment) {
 		let newLiEl = document.createElement('li');
-		newLiEl.innerHTML = `the commenter said ${comment.text}`
+		newLiEl.innerHTML = `Your Review: ${comment.text} @ ${comment.timestamp}`
 
 		commentsUL.appendChild( newLiEl );
 
 
 	})
-	
 }
+
+let textWrapperBot = document.querySelector(".hero-text-wrapper-bottom");
+let textWrapperTop = document.querySelector(".hero-text-wrapper-top");
+
+
+TweenMax.from(textWrapperBot, 1, {
+	x: "100%",
+	ease: Power1.easeIn
+})
+
+TweenMax.from(textWrapperTop, 1, {
+	x: "-300%",
+	ease: Power1.easeIn
+})

@@ -188,11 +188,12 @@ header h1 {
 	line-height: 1.2;
 	text-align: left;
 	font-size: 12px;
+	margin-top: 60px;
 }
 
 @media (min-width: 768px) {
 	.content section .product-wrapper-day p {
-		font-size: 30px;
+		font-size: 20px;
 		margin-top: 60px;
 	}
 }
@@ -214,6 +215,12 @@ header h1 {
 
 @media (min-width: 768px) {
 	.content .images {
+		width: 50%;
+	}
+}
+
+@media (min-width: 768px) {
+	.content .images {
 		width: 75%;
 	}
 }
@@ -225,59 +232,53 @@ header h1 {
 }
 
 .content .images img {
-	width: 50%;
+	width: 40%;
 	margin: auto;
 	padding: 10px;
 }
 
-.content .images p {
+.content .images .review-wrapper {
+	width: 100%;
+	display: inline-block;
 	vertical-align: top;
-	font-family: "Poiret One", cursive;
-	margin: 20px 0px;
 }
 
 @media (min-width: 768px) {
-	.content .images p {
-		display: inline-block;
+	.content .images .review-wrapper {
+		width: 50%;
 	}
 }
 
-.content .images input {
-	margin: 20px 20px;
+.content .images .review-wrapper p {
+	font-family: "Corben", cursive;
+	margin: 5px 0px 10px 10px;
+	display: inline-block;
+}
+
+@media (min-width: 768px) {
+	.content .images .review-wrapper p {
+		margin: 10px 0px 10px 10px;
+	}
+}
+
+.content .images .review-wrapper input {
 	outline: none;
+	display: inline-block;
 }
 
-@media (min-width: 768px) {
-	.content .images input {
-		display: inline-block;
-		vertical-align: top;
-	}
+.content .images .review-wrapper button {
+	display: inline-block;
 }
 
-.content .images ul {
+.content .images .review-wrapper ul {
 	display: block;
-	width: 30%;
+	margin: 10px;
 }
 
-.content .images li {
-	color: red;
-}
-
-@media (min-width: 768px) {
-	.content .images li {
-		display: inline-block;
-	}
-}
-
-.content .images button {
-	vertical-align: top;
-	margin: 20px 0px;
-}
-
-@media (min-width: 768px) {
-	.content .images button {
-		display: inline-block;
-	}
+.content .images .review-wrapper li {
+	font-family: "Corben", cursive;
+	font-weight: 1000;
+	color: #42282E;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -25,7 +25,8 @@ app.post('/comment/:productID', function(req, res) {
 	let productID = req.params.productID;
 	console.log(req.body.text)
 	comments[productID].push( {
-		text: req.body.text
+		text: req.body.text,
+		timestamp: req.body.timestamp
 	})
 	res.send(comments[productID])
 });

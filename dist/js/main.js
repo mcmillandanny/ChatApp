@@ -35,7 +35,9 @@ var sendComment = function sendComment() {
 
 	// console.log("send comment for artist: ", this.getAttribute('data-artist'))
 	axios.post(url, {
-		text: newComment
+		text: newComment,
+		timestamp: moment(new Date().getTime()).format('h:mm a')
+
 	}).then(function (response) {
 		console.log('server responsed', response);
 		showComments(response.data, productID);
@@ -56,9 +58,22 @@ var showComments = function showComments(comments, productID) {
 
 	comments.forEach(function (comment) {
 		var newLiEl = document.createElement('li');
-		newLiEl.innerHTML = 'the commenter said ' + comment.text;
+		newLiEl.innerHTML = 'Your Review: ' + comment.text + ' @ ' + comment.timestamp;
 
 		commentsUL.appendChild(newLiEl);
 	});
 };
+
+var textWrapperBot = document.querySelector(".hero-text-wrapper-bottom");
+var textWrapperTop = document.querySelector(".hero-text-wrapper-top");
+
+TweenMax.from(textWrapperBot, 1, {
+	x: "100%",
+	ease: Power1.easeIn
+});
+
+TweenMax.from(textWrapperTop, 1, {
+	x: "-300%",
+	ease: Power1.easeIn
+});
 //# sourceMappingURL=main.js.map
